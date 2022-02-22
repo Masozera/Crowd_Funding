@@ -12,6 +12,15 @@ charitiy_creattion
 fundriser creation
 """
 
+"""
+home
+signup
+signin
+logout
+charitiy_creattion
+fundriser creation
+"""
+
 def home (request):
     pass
 
