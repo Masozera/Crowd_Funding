@@ -18,9 +18,9 @@ class Charity(models.Model):
     charity_name = models.CharField(max_length=256)
     description  = models.TextField()
 
-class  Quick_Fundariser(models.Model):   # For quick fundraisers
+class  Quick_Fundriser(models.Model):   # For quick fundraisers
     cause_name            = models.CharField(max_length=256)
-    quick_fundariser_name = models.CharField(max_length=256)
+    quick_fundriser_name = models.CharField(max_length=256)
     user                  = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
 
 class Portifolio(models.Model):
@@ -30,78 +30,17 @@ class Portifolio(models.Model):
 
 class Payment(models.Model):
     charity_name           = models.ForeignKey (Charity,on_delete=models.CASCADE)
-    quick_fundariser_name  = models.ForeignKey (Quick_Fundariser,on_delete=models.CASCADE)
-    user         = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
+    quick_fundriser_name   = models.ForeignKey (Quick_Fundriser,on_delete=models.CASCADE)
+    user                   = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
 
 
-# quick_fundariser_name (foreign  key)
-# user (foreign  key)
+"""
+home
+signup
+signin
+logout
+charitiy_creattion
+fundriser creation
+"""
 
 
-
-
-
-
-# Charity
-# user (foreign_key)
-# cause_name (foreign  key)
-# charity_name
-
-# user (foreign_key)
-# cause_name (foreign  key)
-# charity_name
-
-# Quick Fundariser
-# cause_name (foreign  key)
-# quick_fundariser_name 
-# user (foreign_key)
-
-
-
-# Portifolio
-# charity_name (foreign  key)
-# quick_fundariser_name (foreign  key)
-# user (foreign  key)
-
-# Payment
-# charity_name (foreign  key)
-# quick_fundariser_name (foreign  key)
-# user (foreign  key)
-
-# Quick FundariserCharity
-# user (foreign_key)
-# cause_name (foreign  key)
-# charity_name
-
-# Quick Fundariser
-# cause_name (foreign  key)
-# quick_fundariser_name 
-# user (foreign_key)
-
-
-
-# Portifolio
-# charity_name (foreign  key)
-# quick_fundariser_name (foreign  key)
-# user (foreign  key)
-
-# Payment
-# charity_name (foreign  key)
-# quick_fundariser_name (foreign  key)
-# user (foreign  key)
-
-# cause_name (foreign  key)
-# quick_fundariser_name 
-# user (foreign_key)
-
-
-
-# Portifolio
-# charity_name (foreign  key)
-# quick_fundariser_name (foreign  key)
-# user (foreign  key)
-
-# Payment
-# charity_name (foreign  key)
-# quick_fundariser_name (foreign  key)
-# user (foreign  key)
